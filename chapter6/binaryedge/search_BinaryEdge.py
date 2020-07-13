@@ -1,6 +1,6 @@
 from pybinaryedge import BinaryEdge
 
-key='e4dd5074-7aec-45b9-9b81-3bd4d1f382ac'
+key='BINARY_EDGE_API_KEY'
 
 binaryEdge = BinaryEdge(key)
 
