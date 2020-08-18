@@ -12,8 +12,8 @@ def view_parameters(input_parameters):
     print(input_parameters.param2)
     
 parser = OptionParser()
-parser.add_option("--param1", dest="param1", help="parameter1")
-parser.add_option("--param2", dest="param2", help="parameter2")
+parser.add_option("--p1", dest="param1", help="parameter1")
+parser.add_option("--p2", dest="param2", help="parameter2")
 
 (options, args) = parser.parse_args()
 
