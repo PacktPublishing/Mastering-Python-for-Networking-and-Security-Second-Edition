@@ -1,0 +1,191 @@
+
+
+
+ AVAILABLE PLUGINS
+ -----------------
+
+  HeartbleedPlugin
+  SessionResumptionPlugin
+  OpenSslCcsInjectionPlugin
+  RobotPlugin
+  EarlyDataPlugin
+  CertificateInfoPlugin
+  OpenSslCipherSuitesPlugin
+  HttpHeadersPlugin
+  SessionRenegotiationPlugin
+  FallbackScsvPlugin
+  CompressionPlugin
+
+
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   171.97.15.104:443                       => 171.97.15.104 
+
+
+
+
+ SCAN RESULTS FOR 171.97.15.104:443 - 171.97.15.104
+ --------------------------------------------------
+
+ * SSLV2 Cipher Suites:
+      Server rejected all cipher suites.
+
+ * Deflate Compression:
+                                          OK - Compression disabled
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 VULNERABLE - Signaling cipher suite not supported
+
+ * TLSV1_3 Cipher Suites:
+      Server rejected all cipher suites.
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * TLS 1.2 Session Resumption Support:
+      With Session IDs:                  OK - Supported (5 successful, 0 failed, 0 errors, 5 total attempts).
+      With TLS Tickets:                  OK - Supported
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable
+
+ * TLSV1_1 Cipher Suites:
+       Forward Secrecy                    OK - Supported
+       RC4                                INSECURE - Supported
+
+     Preferred:
+        None - Server followed client cipher suite preference.                                                            
+     Accepted:
+        TLS_RSA_WITH_SEED_CBC_SHA                                        128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_RC4_128_SHA                                         128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                                256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                                128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_CBC_SHA                                     256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_CBC_SHA                                     128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                                    112 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_SEED_CBC_SHA                                    128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA                            256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA                            128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA                                 256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA                                 128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA                                112 bits      HTTP 200 OK                                                 
+
+ * Certificate Information:
+     Content
+       SHA1 Fingerprint:                  d47a2710e7521576b84f25250c088cb3e0293ff8
+       Common Name:                       EasyZone Hotspot Billing
+       Issuer:                            EasyZone Hotspot Billing
+       Serial Number:                     11392801545531594041
+       Not Before:                        2014-08-13 07:08:06
+       Not After:                         2024-08-10 07:08:06
+       Signature Algorithm:               sha1
+       Public Key Algorithm:              RSA
+       Key Size:                          4096
+       Exponent:                          65537 (0x10001)
+       DNS Subject Alternative Names:     []
+
+     Trust
+       Hostname Validation:               FAILED - Certificate does NOT match 171.97.15.104
+       Android CA Store (9.0.0_r9):       FAILED - Certificate is NOT Trusted: self signed certificate
+       Apple CA Store (iOS 12, macOS 10.14, watchOS 5, and tvOS 12):FAILED - Certificate is NOT Trusted: self signed certificate
+       Java CA Store (jdk-12.0.1):        FAILED - Certificate is NOT Trusted: self signed certificate
+       Mozilla CA Store (2019-03-14):     FAILED - Certificate is NOT Trusted: self signed certificate
+       Windows CA Store (2019-05-27):     FAILED - Certificate is NOT Trusted: self signed certificate
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    EasyZone Hotspot Billing
+       Verified Chain:                    ERROR - Could not build verified chain (certificate untrusted?)
+       Received Chain Contains Anchor:    ERROR - Could not build verified chain (certificate untrusted?)
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      ERROR - Could not build verified chain (certificate untrusted?)
+
+     Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          NOT SUPPORTED - Extension not found
+
+     OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+ * TLSV1_2 Cipher Suites:
+       Forward Secrecy                    OK - Supported
+       RC4                                INSECURE - Supported
+
+     Preferred:
+        None - Server followed client cipher suite preference.                                                            
+     Accepted:
+        TLS_RSA_WITH_SEED_CBC_SHA                                        128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_RC4_128_SHA                                         128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                                256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                                128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_GCM_SHA384                                  256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_CBC_SHA256                                  256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_CBC_SHA                                     256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_GCM_SHA256                                  128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_CBC_SHA256                                  128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_CBC_SHA                                     128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                                    112 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_SEED_CBC_SHA                                    128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA                            256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA                            128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_GCM_SHA384                              256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA256                              256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA                                 256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_GCM_SHA256                              128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA256                              128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA                                 128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA                                112 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA                                112 bits      HTTP 200 OK                                                 
+
+ * TLSV1 Cipher Suites:
+       Forward Secrecy                    OK - Supported
+       RC4                                INSECURE - Supported
+
+     Preferred:
+        None - Server followed client cipher suite preference.                                                            
+     Accepted:
+        TLS_RSA_WITH_SEED_CBC_SHA                                        128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_RC4_128_SHA                                         128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                                256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                                128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_CBC_SHA                                     256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_CBC_SHA                                     128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                                    112 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_SEED_CBC_SHA                                    128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA                            256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA                            128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA                                 256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA                                 128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA                                112 bits      HTTP 200 OK                                                 
+
+ * Session Renegotiation:
+       Client-initiated Renegotiation:    OK - Rejected
+       Secure Renegotiation:              OK - Supported
+
+ * SSLV3 Cipher Suites:
+       Forward Secrecy                    OK - Supported
+       RC4                                INSECURE - Supported
+
+     Preferred:
+        None - Server followed client cipher suite preference.                                                            
+     Accepted:
+        TLS_RSA_WITH_SEED_CBC_SHA                                        128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_RC4_128_SHA                                         128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                                256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                                128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_256_CBC_SHA                                     256 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_AES_128_CBC_SHA                                     128 bits      HTTP 200 OK                                                 
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                                    112 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_SEED_CBC_SHA                                    128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA                            256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA                            128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA                                 256 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA                                 128 bits      HTTP 200 OK                                                 
+        TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA                                112 bits      HTTP 200 OK                                                 
+
+
+ SCAN COMPLETED IN 20.30 S
+ -------------------------
