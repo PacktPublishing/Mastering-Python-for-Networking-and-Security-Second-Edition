@@ -10,4 +10,4 @@ try:
     print("Characters in file:", countchars)
     print("Lines in file:", countlines)
 except IOError as error:
-    print("I/O error occurred:", str(error.errno))
+    print("I/O error occurred:", str(error))

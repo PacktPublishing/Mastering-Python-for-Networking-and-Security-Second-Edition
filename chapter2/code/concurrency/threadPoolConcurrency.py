@@ -5,7 +5,7 @@ import random
 
 def view_thread():
     print("Executing Thread")
-    print("Accesing thread : {}".format(threading.get_ident()))
+    print("Accessing thread : {}".format(threading.get_ident()))
     print("Thread Executed {}".format(threading.current_thread()))
 
 def main():

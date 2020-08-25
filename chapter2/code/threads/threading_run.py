@@ -9,8 +9,12 @@ class MyThread(threading.Thread):
     def run(self):
         print(self.message)
 
-threads = []
-for num in range(0, 5):
-	thread = MyThread("I am the "+str(num)+" thread")
-	thread.name = num
-	thread.start()
+def test():
+    for num in range(0, 10):
+        thread = MyThread("I am the "+str(num)+" thread")
+        thread.name = num
+        thread.start()
+
+if __name__ == '__main__':
+    import timeit
+    print(timeit.timeit("test()", setup="from __main__ import test",number=5))
