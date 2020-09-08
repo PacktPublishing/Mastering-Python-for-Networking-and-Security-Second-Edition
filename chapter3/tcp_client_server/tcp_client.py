@@ -8,7 +8,7 @@ port = 9998
 try:
 	mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	mysocket.connect((host, port))
-	print('Conntencted to host '+str(host)+' in port: '+str(port))
+	print('Connected to host '+str(host)+' in port: '+str(port))
 	message = mysocket.recv(1024)
 	print("Message received from the server", message)
 	while True:

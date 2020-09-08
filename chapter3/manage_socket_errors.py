@@ -7,8 +7,9 @@ port = 80
 
 
 try:
-	mysocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-	mysocket.settimeout(5)
+    mysocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    print(mysocket)
+    mysocket.settimeout(5)
 except socket.error as e:
 	print("socket create error: %s" %e)
 	sys.exit(1)
@@ -16,7 +17,6 @@ except socket.error as e:
 
 try:
     mysocket.connect((host,port))
-    #print socket information
     print(mysocket)
 
 except socket.timeout as e :
