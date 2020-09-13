@@ -1,16 +1,16 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import urllib.request
 import urllib.error
 
 def count_words_file(url):
     try:
-        file = urllib.request.urlopen(url)
+        file_response = urllib.request.urlopen(url)
     except urllib.error.URLError as error:
         print('Exception', error)
         print('reason', error.reason)
     else:
-        content = file.read()
+        content = file_response.read()
         return len(content.split())
 
 

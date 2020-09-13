@@ -13,6 +13,6 @@ urllib.request.install_opener(opener)
 
 response = urllib.request.urlopen('http://'+url)
 html_content= response.read()
-pattern = re.compile("[-a-zA-Z0-9._]+@[-a-zA-Z0-9_]+.[a-zA-Z0-9_.]+")
-mails = re.findall(pattern,str(content))
+pattern = re.compile("[-a-zA-Z0-9._]+[-a-zA-Z0-9._]+@[-a-zA-Z0-9_]+.[a-zA-Z0-9_.]+")
+mails = re.findall(pattern,str(html_content))
 print(mails)

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import requests,json
 data_dictionary = {"id": "0123456789"}

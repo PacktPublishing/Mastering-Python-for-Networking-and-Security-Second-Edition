@@ -5,5 +5,7 @@ connection.request("GET", "/")
 response = connection.getresponse()
 print(type(response))
 print(response.status, response.reason)
-data = response.read()
-print(data)
+
+if response.status == 200:
+    data = response.read()
+    print(data)

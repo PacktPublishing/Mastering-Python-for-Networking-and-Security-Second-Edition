@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import requests, json
 
 
-domain = input("Enter the domain http://")
+domain = input("Enter the hostname http://")
 
 response = requests.get("http://"+domain)
 
