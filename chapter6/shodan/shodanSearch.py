@@ -11,12 +11,12 @@ api = shodan.Shodan(SHODAN_API_KEY)
 
 parser = argparse.ArgumentParser(description='Shodan search')
 
-parser.add_argument("-target", dest="target", help="target IP / domain", required=None)
-parser.add_argument("-search", dest="search", help="search", required=None)
+parser.add_argument("--target", dest="target", help="target IP / domain", required=None)
+parser.add_argument("--search", dest="search", help="search", required=None)
 
 parsed_args = parser.parse_args()
 
-if sys.argv[1] == '-search':
+if len(sys.argv)>1 and sys.argv[1] == '--search':
     try:
         results = api.search(parsed_args.search)
         print('Results: %s' % results['total'])
@@ -26,7 +26,7 @@ if sys.argv[1] == '-search':
     except shodan.APIError as exception:
         print('Error: %s' % exception)
         
-if sys.argv[1] == '-target':
+if len(sys.argv)>1 and sys.argv[1] == '--target':
     try:
         hostname = socket.gethostbyname(parsed_args.target)
         results = api.host(hostname)

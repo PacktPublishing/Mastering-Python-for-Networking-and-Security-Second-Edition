@@ -5,8 +5,8 @@ import re
 parser = argparse.ArgumentParser(description='Get banner server')
 
 # Main arguments
-parser.add_argument("-target", dest="target", help="target IP", required=True)
-parser.add_argument("-port", dest="port", help="port", type=int, required=True)
+parser.add_argument("--target", dest="target", help="target IP", required=True)
+parser.add_argument("--port", dest="port", help="port", type=int, required=True)
 parsed_args = parser.parse_args()
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,7 +17,9 @@ query = "GET / HTTP/1.1\nHost: "+parsed_args.target+"\n\n"
 http_get = bytes(query,'utf-8')
 
 data = ''
-vulnbanners = open('vulnbanners.txt', 'r')
+
+with open('vulnbanners.txt', 'r') as file:
+    vulnbanners = file.read()
 
 try:
     sock.sendall(http_get)

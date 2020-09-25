@@ -1,13 +1,13 @@
 import shodan
 import requests
+import os
 
-SHODAN_API_KEY = "" 
+SHODAN_API_KEY = os.environ['SHODAN_API_KEY'] 
 api = shodan.Shodan(SHODAN_API_KEY)
 
 domain = 'www.python.org'
 
-dnsResolve = 'https://api.shodan.io/dns/resolve?hostnames=' + domain + '&key=' + SHODAN_API_KEY
-
+dnsResolve = f"https://api.shodan.io/dns/resolve?hostnames={domain}&key={SHODAN_API_KEY}"
 
 try:
     resolved = requests.get(dnsResolve)

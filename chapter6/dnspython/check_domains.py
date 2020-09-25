@@ -11,7 +11,7 @@ def main(domain1, domain2):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Check 2 domains with dns Python')
-    parser.add_argument('--domain1', action="store", dest="domain1",  default='docs.python.org')
+    parser.add_argument('--domain1', action="store", dest="domain1",  default='python.org')
     parser.add_argument('--domain2', action="store", dest="domain2",  default='docs.python.org')
     given_args = parser.parse_args() 
     domain1 = given_args.domain1
