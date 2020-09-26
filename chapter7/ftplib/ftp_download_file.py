@@ -10,11 +10,10 @@ def ftp_file_download(server, username):
     ftp_client = ftplib.FTP(server, username)
     ftp_client.cwd(DOWNLOAD_DIR_PATH)
     try:
-        file_handler = open(DOWNLOAD_FILE_NAME, 'wb')
-        ftp_cmd = 'RETR %s' %DOWNLOAD_FILE_NAME
-        ftp_client.retrbinary(ftp_cmd,file_handler.write)
-        file_handler.close()
-        ftp_client.quit()
+        with open(DOWNLOAD_FILE_NAME, 'wb') as file_handler:
+            ftp_cmd = 'RETR %s' %DOWNLOAD_FILE_NAME
+            ftp_client.retrbinary(ftp_cmd,file_handler.write)
+            ftp_client.quit()
     except Exception as exception:
         print('File could not be downloaded:',exception)
 
