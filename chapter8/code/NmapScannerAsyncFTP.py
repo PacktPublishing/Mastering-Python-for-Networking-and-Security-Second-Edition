@@ -55,7 +55,7 @@ class NmapScannerAsyncFTP:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Nmap scanner async')
     parser.add_argument("--host", dest="host", help="target IP / domain", required=True)
-    parser.add_argument("--ports", dest="ports", help="Please, specify the target port(s) separated by comma[80,8080 by default]", default="80,8080")
+    parser.add_argument("--ports", dest="ports", help="Please, specify the target port(s) separated by comma[80,8080 by default]", default="21")
     parsed_args = parser.parse_args()
     port_list = parsed_args.ports.split(',')
     ip_address = parsed_args.host

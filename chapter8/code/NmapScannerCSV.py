@@ -2,6 +2,7 @@
 
 import optparse
 import nmap
+import csv
 
 class NmapScannerCSV:
      
@@ -17,14 +18,20 @@ class NmapScannerCSV:
             
             print(self.portScanner.csv())
 
-            print("Summary for host",host)           
-            for x in self.portScanner.csv().split("\n")[1:-1]:
-                splited_line = x.split(";")
-                host = splited_line[0]
-                protocol = splited_line[5]
-                port = splited_line[4]
-                state = splited_line[6]
-                print("Protocol:",protocol,"Port:",port,"State:",state)         
+            print("Summary for host",host)
+
+            with open('csv_file.csv', mode='w') as csv_file:
+                csv_writer = csv.writer(csv_file, delimiter=',')
+                csv_writer.writerow(['Host', 'Protocol', 'Port', 'State'])
+           
+                for x in self.portScanner.csv().split("\n")[1:-1]:
+                    splited_line = x.split(";")
+                    host = splited_line[0]
+                    protocol = splited_line[5]
+                    port = splited_line[4]
+                    state = splited_line[6]
+                    print("Protocol:",protocol,"Port:",port,"State:",state)
+                    csv_writer.writerow([host, protocol, port, state])         
     
         except Exception as exception:
             print("Error to connect with " + host + " for port scanning" ,exception)
