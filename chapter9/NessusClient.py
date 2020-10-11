@@ -2,6 +2,7 @@
 
 import requests
 import json
+import argparse
 
 class NessusClient():
     def __init__(self, nessusServer, nessusPort):
@@ -42,8 +43,17 @@ class NessusClient():
         return content
 
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--user',  required=True)
+parser.add_argument('--password', required=True)
+args = parser.parse_args()
+
+user=args.user
+password=args.password
+
 client = NessusClient('127.0.0.1','8834')
-client.login('admin','admin')
+client.login(user,password)
 print(client.request_api('/server/status'))
 scans = client.request_api('/scans')['scans']
 
