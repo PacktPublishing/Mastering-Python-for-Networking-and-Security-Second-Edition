@@ -4,7 +4,7 @@ import sqlite3
 from sqlite3 import DatabaseError
 
 def read_from_db(cursor):
-  cursor.execute('SELECT * FROM notexits')
+  cursor.execute('SELECT * FROM Customer')
   data = cursor.fetchall()
   print(data)
   for row in data:
