@@ -1,14 +1,15 @@
 from Crypto.Cipher import AES
 from Crypto.Hash import SHA256
 import os, random, struct
+from Crypto import Random
 
 def encrypt_file(key, filename):
     chunk_size = 64*1024
 
     output_filename = filename + '.encrypted'
 
-    # Initialization vector
-    iv = 'This is an IV456'.encode("utf8")
+    # Random Initialization vector
+    iv = Random.new().read(AES.block_size)
 
     #create the encryption cipher
     encryptor = AES.new(key, AES.MODE_CBC, iv)
