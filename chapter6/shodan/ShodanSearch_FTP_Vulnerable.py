@@ -2,9 +2,10 @@
 
 import shodan
 import re
+import os
 
 servers =[]
-shodanKeyString = 'SHODAN_API_KEY'
+shodanKeyString = os.environ['SHODAN_API_KEY']
 shodanApi = shodan.Shodan(shodanKeyString)
 
 results = shodanApi.search("port: 21 Anonymous user logged in")

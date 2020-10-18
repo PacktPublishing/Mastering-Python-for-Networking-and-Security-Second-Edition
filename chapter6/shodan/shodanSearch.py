@@ -4,8 +4,9 @@ import shodan
 import argparse
 import socket
 import sys
+import os
 
-SHODAN_API_KEY = ""
+SHODAN_API_KEY = os.environ['SHODAN_API_KEY']
 
 api = shodan.Shodan(SHODAN_API_KEY)
 

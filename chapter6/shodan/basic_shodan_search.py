@@ -4,6 +4,7 @@ import shodan
 import os
 
 SHODAN_API_KEY = os.environ['SHODAN_API_KEY']
+print(SHODAN_API_KEY)
 shodan = shodan.Shodan(SHODAN_API_KEY)
 
 try:
