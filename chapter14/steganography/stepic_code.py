@@ -25,7 +25,7 @@ def encode_imdata(imdata, data):
     for i in range(datalen):
         pixels = [value & ~1 for value in
                   imdata.__next__()[:3] + imdata.__next__()[:3] + imdata.__next__()[:3]]
-        byte = ord(data[i])
+        byte = data[i]
         for j in range(7, -1, -1):
             pixels[j] |= byte & 1
             byte >>= 1
