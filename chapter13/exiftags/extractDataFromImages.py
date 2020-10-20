@@ -17,12 +17,12 @@ def get_exif_metadata(image_path):
 def decode_gps_info(exif):
     gpsinfo = {}
     if 'GPSInfo' in exif:
-        Nsec = exif['GPSInfo'][2][2][0] / float(exif['GPSInfo'][2][2][1])
-        Nmin = exif['GPSInfo'][2][1][0] / float(exif['GPSInfo'][2][1][1])
-        Ndeg = exif['GPSInfo'][2][0][0] / float(exif['GPSInfo'][2][0][1])
-        Wsec = exif['GPSInfo'][4][2][0] / float(exif['GPSInfo'][4][2][1])
-        Wmin = exif['GPSInfo'][4][1][0] / float(exif['GPSInfo'][4][1][1])
-        Wdeg = exif['GPSInfo'][4][0][0] / float(exif['GPSInfo'][4][0][1])
+        Nsec = exif['GPSInfo'][2][2]
+        Nmin = exif['GPSInfo'][2][1]
+        Ndeg = exif['GPSInfo'][2][0]
+        Wsec = exif['GPSInfo'][4][2]
+        Wmin = exif['GPSInfo'][4][1]
+        Wdeg = exif['GPSInfo'][4][0]
         if exif['GPSInfo'][1] == 'N':
             Nmult = 1
         else:
