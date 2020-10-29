@@ -19,7 +19,7 @@ http_get = bytes(query,'utf-8')
 data = ''
 
 with open('vulnbanners.txt', 'r') as file:
-    vulnbanners = file.read()
+    vulnbanners = file.readlines()
 
 try:
     sock.sendall(http_get)
